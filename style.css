@@ -1,0 +1,414 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+* body {
+    background-color: white;
+  }
+  h1 {
+    color: black;
+    font-weight: 100;
+  }
+
+  h2 {
+    color: black;
+    font-weight: 300;
+  }
+  h3 {
+    text-align: center;
+    font-weight: 100;
+  }
+
+  p {
+    color: black;
+    text-align: center;
+  } 
+
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.iconHome {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+}
+
+.iconHome:hover {
+  transform: scale(1.3);
+  transition: transform .5s;
+}
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    transition: scale(1);
+    color: black;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .iconLogo:hover {
+    transform: scale(1.5);
+    transition: transform .5s;
+    color: pink;
+  }
+
+  .title {
+    padding: 0;
+    margin: 5px;
+    font-size: 35px;
+    justify-content: center; 
+    position: relative;
+    text-align: center;
+    margin-top: 10%;
+  }
+
+
+  .navigation {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    margin: 70px; 
+    justify-content: space-between;
+    margin-right: 20%;
+}
+
+
+.navItem {
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-decoration: none;
+  transition: scale(1);
+  font-size: 30px;
+  color: black;
+}
+
+.navItem:hover {
+  transform: scale(1.1);
+  transition: transform .5s;
+  text-decoration: none;
+  color: pink;
+}
+
+.aboutMe {
+  text-align: center;
+  padding: 5px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-size: 10px;
+}
+
+.aboutText {
+  display: flex;
+  padding: 5px;
+  position: absolute;
+  margin-bottom: 50px;
+}
+
+.smallFont {
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.copyright {
+  font-size: 13px;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+
+  /*   GAME    */
+
+  
+  .memory-game {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    margin-bottom: 70px;
+    margin-top: 100px;
+  }
+  
+  .memory-card {
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s; 
+  }
+  
+  .memory-card:active {
+    transform: scale(.90);
+    transition: transform .2s;
+  }
+  
+  .memory-card.flip {
+   transform: rotateY(180deg);
+  }
+  
+  .front-face,
+  .back-face {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    padding: 1px;
+    border-radius: 5px;
+    background: white;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .front-face {
+    transform: rotateY(180deg);
+  }
+  
+  img {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+  }
+  
+  
+  
+  
+
+
+
+/* ANIMATION PAGE*/
+
+.videoTitle {
+  padding: 0;
+  margin: 1px;
+  font-size: 20px;
+  justify-content: center; 
+  position: relative;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 2%;
+}
+
+.showreel {
+  position: absolute;
+  margin-bottom: 500px;
+  padding-bottom: 60%; /* 16:9 */
+  height: 0;
+
+}
+
+.showreel video {
+  position: absolute;
+  top: 5px;
+  margin-top: 50%;
+  margin: 500px;
+  width: 1152px;
+  height: 648px;
+}
+
+/* les nuits des bassins */
+
+
+
+.gallery-section{
+  position: relative;
+  width: 100%;
+  margin-top: 850px;
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+  padding: 60px 0;
+  background: #f1f1f1;
+}
+
+.inner-width{
+  width: 100%;
+  max-width: 2500px;
+  margin: auto;
+  padding: 20px;
+}
+
+.gallery-section h1{
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.border{
+  width: 180px;
+  height: 4px;
+  background: #333;
+  margin: 60px auto;
+}
+
+.gallery-section .gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-section .image{
+  flex: %;
+  justify-content: space-between;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+.gallery-section .image img{
+  width: 200px;
+  height: 200px;
+  transition: 0.4s;
+  margin: 2px;
+}
+
+.gallery-section .image:hover img{
+  transform: scale(1.4) rotate(6deg);
+}
+
+@media screen and (max-width:960px) {
+  .gallery-section .image{
+    flex: 33.33%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .gallery-section .image{
+    flex: 50%;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .gallery-section .image{
+    flex: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+/* ILLUSTRATION PAGE */
+
+.slideshow {
+  overflow: hidden;
+  margin-top: 15%;
+  margin-bottom: 10%;
+  
+}
+
+.sliding-background {
+  background: url("./sliding-background-for-website.jpg") repeat-x;
+  height: 500px;
+  width: 5076px;
+  animation: slide 60s linear infinite;
+}
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{ 
+    transform: translate3d(-5076px, 0, 0);
+  }
+}
+
+
+/* CONTACT PAGE */
+
+.pageTitle {
+  padding: 2%;
+    margin: 5px;
+    font-size: 35px;
+    justify-content: center; 
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+    
+}
+
+.container {
+  padding: 2%;
+  margin: 5px;
+  font-size: 35px;
+  justify-content: center; 
+  position: relative;
+  text-align: center;
+  margin-top: 10%;
+}
+
+
+.container {
+	padding: 12px 24px 24px 24px;
+	margin: 100px;
+  background:pink;
+  border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+
+label {
+	font-size: 0.85em;
+  margin-left: 12px;
+}
+
+input[type=text],input[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=text]:focus,input[type=email]:focus, textarea:focus {
+	border: 2px solid pink;
+}
+
+input[type=submit] {
+	background: lightblue;
+	margin: 0 auto;
+	outline: 0;
+	color: white;
+	border: 0;
+	padding: 12px 24px;
+	border-radius: 4px;
+	transition: all ease-in-out 0.1s;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+
+input[type=submit]:focus {
+	background: #A5D6A7;
+	color: whitesmoke;
+}
+
+input[type=submit]:hover {
+	background:salmon;
+}
+
+.center {
+	text-align: center;
+}
+
+
+
+
+
+
+
